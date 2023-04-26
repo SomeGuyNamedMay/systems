@@ -34,7 +34,6 @@
   services.upower.enable = true;
 
   programs.dconf.enable = true;
-  programs.gamemode.enable = true;
   programs.seahorse.enable = true;
   services.gnome.gnome-keyring.enable = true;
 

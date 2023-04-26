@@ -8,35 +8,34 @@
   let
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
     shared-modules = [
-        #stylix.nixosModules.stylix
-        #{
-        #  stylix.homeManagerIntegration.autoImport = false;
-        #  stylix.image = ./resources/wallpapers/raison-detre.jpg;
-        #  stylix.polarity = "dark";
-        #  stylix.fonts = {
-        #    serif = {
-        #      package = pkgs.dejavu_fonts;
-        #      name = "DejaVu Serif";
-        #    };
-        #    sansSerif = {
-        #      package = pkgs.dejavu_fonts;
-        #      name = "DejaVu Sans";
-        #    };
-        #    monospace = {
-        #      package = pkgs.dejavu_fonts;
-        #      name = "DejaVu Sans Mono";
-        #    };
-        #    sizes = {
-        #      desktop = 12;
-        #      applications = 15;
-        #      terminal = 15;
-        #      popups = 12;
-        #    };
-        #  };
-        #  stylix.targets = {
-        #    grub.useImage = true;
-        #  };
-        #}
+        stylix.nixosModules.stylix
+        {
+          stylix.image = ./resources/wallpapers/raison-detre.jpg;
+          stylix.polarity = "dark";
+          stylix.fonts = {
+            serif = {
+              package = pkgs.dejavu_fonts;
+              name = "DejaVu Serif";
+            };
+            sansSerif = {
+              package = pkgs.dejavu_fonts;
+              name = "DejaVu Sans";
+            };
+            monospace = {
+              package = pkgs.dejavu_fonts;
+              name = "DejaVu Sans Mono";
+            };
+            sizes = {
+              desktop = 12;
+              applications = 15;
+              terminal = 15;
+              popups = 12;
+            };
+          };
+          stylix.targets = {
+            grub.useImage = true;
+          };
+        }
         ./config/general/boot.nix
         ./config/general/configuration.nix
         ./config/general/hardware.nix
