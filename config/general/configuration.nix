@@ -10,6 +10,10 @@
   programs.nix-ld.enable = true;
   nix.optimise.automatic = true;
 
+  nixpkgs.config.allowUnfree = true;
+
+  programs.steam.enable = true;
+
   location.provider = "geoclue2";
   services.geoclue2 = {
       enable = true;
