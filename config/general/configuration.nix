@@ -12,8 +12,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  programs.steam.enable = true;
-
   location.provider = "geoclue2";
   services.geoclue2 = {
       enable = true;
@@ -23,7 +21,6 @@
       enable = true;
       extraPortals = with pkgs; [
           xdg-desktop-portal
-          #xdg-desktop-portal-gtk
           xdg-desktop-portal-hyprland
       ];
   };
@@ -54,6 +51,17 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+
+  networking.firewall = {
+      enable = true;
+      allowedTCPPortRanges = [
+          { from = 1714; to = 1764; }
+      ];
+      allowedUDPPortRanges = [
+          { from = 1714; to = 1764; }
+      ];
+  };
+
 
   # Set your time zone.
   time.timeZone = "America/New_York";
