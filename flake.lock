@@ -105,17 +105,14 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1684579323,
-        "narHash": "sha256-9YL2581CnrIOMMCRFXjfZeUPOvZN7+7Q4BhgXq5Imwo=",
-        "owner": "danth",
-        "repo": "stylix",
-        "rev": "cd9e19daa104c7f49fdc571b9cf8c9d76dd1b3ba",
-        "type": "github"
+        "lastModified": 1685338780,
+        "narHash": "sha256-A0nGB7vkJyBzNK7w6fxbVFhxaPp+XGA53LOfkx5XRps=",
+        "type": "git",
+        "url": "file:///home/mason/Projects/stylix"
       },
       "original": {
-        "owner": "danth",
-        "repo": "stylix",
-        "type": "github"
+        "type": "git",
+        "url": "file:///home/mason/Projects/stylix"
       }
     },
     "utils": {
