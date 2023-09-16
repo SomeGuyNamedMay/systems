@@ -5,6 +5,13 @@
 { config, pkgs, lib, stylix, ... }:
 
 {
+
+  #x11 setup
+  services.xserver = {
+      enable = true;
+      displayManager.startx.enable = true;
+  };
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.gc.automatic = true;
   programs.nix-ld.enable = true;
@@ -16,14 +23,7 @@
   services.geoclue2 = {
       enable = true;
   };
-  services.automatic-timezoned.enable = true;
-  xdg.portal = {
-      enable = true;
-      extraPortals = with pkgs; [
-          xdg-desktop-portal
-          xdg-desktop-portal-hyprland
-      ];
-  };
+  programs.hyprland.enable = true;
 
 
   services.transmission.enable = true;
@@ -44,8 +44,6 @@
   services.octoprint.enable = true;
 
   services.gvfs.enable = true;
-
-  programs.hyprland.enable = true;
 
   services.tumbler.enable = true;
 

@@ -1,23 +1,21 @@
 {config, lib, pkgs, stylix, ...}:
 
 {
-          stylix.image = pkgs.fetchurl {
-              url = "https://dl.dropboxusercontent.com/s/26outp2w90fw4bl/ffxiv-wallpaper.jpg?dl=0";
-              sha256 = "I8vEvC2R68ToXDLD/ZYK93NXpxeWw84btX7Spfajuec=";
+          stylix.wallpaper = config.lib.stylix.mkAnimation {
+              animation = ../../resources/gif/008.gif;
           };
-          stylix.polarity = "dark";
           stylix.fonts = {
             serif = {
-              package = pkgs.dejavu_fonts;
-              name = "DejaVu Serif";
+              package = pkgs.nerdfonts;
+              name = "FiraCode Nerd Font";
             };
             sansSerif = {
-              package = pkgs.dejavu_fonts;
-              name = "DejaVu Sans";
+              package = pkgs.nerdfonts;
+              name = "FiraCode Nerd Font";
             };
             monospace = {
-              package = pkgs.dejavu_fonts;
-              name = "DejaVu Sans Mono";
+              package = pkgs.nerdfonts;
+              name = "FiraCode Nerd Font Mono";
             };
             sizes = {
               desktop = 12;

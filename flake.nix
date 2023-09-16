@@ -6,7 +6,6 @@
   description = "A very basic flake";
   outputs = { self, nixpkgs, stylix, ...}:
   let
-    pkgs = nixpkgs.legacyPackages.x86_64-linux;
     shared-modules = [
         stylix.nixosModules.stylix
         (import ./config/general)
