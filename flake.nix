@@ -1,7 +1,7 @@
 {
   inputs = {
       nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-      stylix.url = "/home/mason/Projects/stylix";
+      stylix.url = "github:SomeGuyNamedMay/stylix/wallpaper-refactor";
   };
   description = "A very basic flake";
   outputs = { self, nixpkgs, stylix, ...}:

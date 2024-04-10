@@ -25,13 +25,9 @@
   };
   programs.hyprland.enable = true;
 
-
-  services.transmission.enable = true;
-
   services.udisks2.enable = true;
 
   programs.light.enable = true;
-
   services.upower.enable = true;
 
   programs.dconf.enable = true;
@@ -41,8 +37,6 @@
   programs.regreet.enable = true;
   
   services.dbus.enable = true;
-  services.octoprint.enable = true;
-
   services.gvfs.enable = true;
 
   services.tumbler.enable = true;

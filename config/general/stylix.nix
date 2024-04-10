@@ -1,8 +1,8 @@
 {config, lib, pkgs, stylix, ...}:
 
 {
-          stylix.wallpaper = config.lib.stylix.mkAnimation {
-              animation = ../../resources/gif/008.gif;
+          stylix.wallpaper = config.lib.stylix.types.wallpaper.from.image {
+              file = ../../resources/static/raison-detre.jpg;
           };
           stylix.fonts = {
             serif = {
