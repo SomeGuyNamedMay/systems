@@ -7,7 +7,6 @@
         ./packages.nix
         ./users.nix
         ./virtualisation.nix
-        ./stylix.nix
     ];
     nix.package = pkgs.nixFlakes;
     nix.settings = {
