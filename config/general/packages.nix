@@ -9,5 +9,8 @@
     pamixer
     playerctl
     home-manager
+    git
+    vim
+    foot
   ];
 }

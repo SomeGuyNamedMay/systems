@@ -12,20 +12,19 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
-  networking.hostName = "flex";
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/45d651cf-a51c-492d-bd94-1b860ffcfc30";
+    { device = "/dev/disk/by-uuid/512a963c-ddac-4797-9906-3b783b37113f";
       fsType = "ext4";
     };
 
-  fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/9568-7885";
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/E886-87C5";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/78f023b8-3b5f-4a5f-a391-2ec7719c6ed9"; }
+    [ { device = "/dev/disk/by-uuid/7492cab4-53d4-4222-a7be-bbab757fb52b"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -35,6 +34,6 @@
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
 
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

@@ -6,7 +6,6 @@
         ./hardware.nix
         ./packages.nix
         ./users.nix
-        ./virtualisation.nix
     ];
     nix.package = pkgs.nixFlakes;
     nix.settings = {
